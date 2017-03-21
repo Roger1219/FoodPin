@@ -109,4 +109,13 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         navigationController?.hidesBarsOnSwipe = false
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
+    
+    //Segue for mapView
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMap" {
+            let destination = segue.destination as! rgMapViewController
+            destination.mapRestaurant = detailRestaurant
+        
+        }
+    }
 }

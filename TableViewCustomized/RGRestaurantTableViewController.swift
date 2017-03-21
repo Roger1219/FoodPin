@@ -134,7 +134,7 @@ class RGRestaurantTableViewController: UITableViewController {
  
     
     var restaurants:[rgRestaurant] = [
-        rgRestaurant(name: "Cafe Deadend", location: "G/FFfffffffffffffffffffff,72 Po Hing Fong, Sheung Wan, Hong Kong", type: "Coffee & Tea Shop", image: "cafedeadend.jpg", isVisited: false),
+        rgRestaurant(name: "Cafe Deadend", location: "G/F,72 Po Hing Fong, Sheung Wan, Hong Kong", type: "Coffee & Tea Shop", image: "cafedeadend.jpg", isVisited: false),
         rgRestaurant(name: "Homei", location: "Hong Kong", type: "Cafe", image:"homei.jpg", isVisited: false),
         rgRestaurant(name: "Teakha", location: "Hong Kong", type: "Tea House", image:"teakha.jpg", isVisited: false),
         rgRestaurant(name: "Cafe loisl", location:"Hong Kong", type: "Austrian / Causual Drink", image: "cafeloisl.jpg", isVisited: false),
