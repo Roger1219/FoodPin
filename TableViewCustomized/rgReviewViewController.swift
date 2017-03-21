@@ -17,21 +17,21 @@ class rgReviewViewController: UIViewController {
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = view.bounds
         backgroundImageView.addSubview(blurEffectView)
- 
+ /*
     //Animation Plan A
     
         // ratingStackView transforming animation
         let scale = CGAffineTransform(scaleX: 0.0, y: 0.0)  //make it small as a dot
         let translate = CGAffineTransform(translationX: 0, y: 500) // make it move to the bottom of the screen
         ratingStackView.transform = scale.concatenating(translate) // combine the above two animation together
+ */
  
- /*
     //Animation Plan B
         let translate = CGAffineTransform(translationX: 0, y: 500)
         self.dislikeRating.transform = translate
         self.goodRating.transform = translate
         self.greatRating.transform = translate
-  */
+  
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,12 +45,13 @@ class rgReviewViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         // animation without spring
             // UIView.animate(withDuration: 0.7, animations: animation1)
-    //Animation Plan A
+   /*
+        //Animation Plan A
     
         // animation with spring
         UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.7, options: [], animations: animation1, completion: nil)
+    */
     
-    /*
     //Animation Plan B
         UIView.animate(withDuration: 0.7, animations: {
             self.dislikeRating.transform = CGAffineTransform.identity
@@ -61,7 +62,7 @@ class rgReviewViewController: UIViewController {
         UIView.animate(withDuration: 0.7, delay: 0.4, options: [], animations: {
             self.greatRating.transform = CGAffineTransform.identity
         }, completion: nil)
-    */
+    
     }
  
         

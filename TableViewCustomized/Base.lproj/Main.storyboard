@@ -217,70 +217,65 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What do you think?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uso-TT-KHG">
-                                <rect key="frame" x="84.5" y="206" width="206.5" height="29"/>
+                                <rect key="frame" x="84" y="206" width="207" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="x5s-KW-uil">
-                                <rect key="frame" x="72.5" y="298" width="230" height="70"/>
-                                <subviews>
-                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNJ-GA-2C8" userLabel="dislike">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="nhG-He-qUj"/>
-                                            <constraint firstAttribute="width" constant="70" id="qNF-AK-fFX"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="dislike"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="35"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="ratingSelectedWithSender:" destination="VD2-7C-CGk" eventType="touchUpInside" id="HcK-gf-wkq"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rhz-Wc-TeQ" userLabel="good">
-                                        <rect key="frame" x="80" y="0.0" width="70" height="70"/>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="NRD-gT-vpD"/>
-                                            <constraint firstAttribute="width" constant="70" id="cRA-vL-tub"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="good"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="35"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="ratingSelectedWithSender:" destination="VD2-7C-CGk" eventType="touchUpInside" id="Swl-eL-8Un"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="300" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSg-ov-jlY" userLabel="great">
-                                        <rect key="frame" x="160" y="0.0" width="70" height="70"/>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="5pD-wO-kln"/>
-                                            <constraint firstAttribute="width" constant="70" id="t8T-SS-wJM"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" image="great"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="35"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="ratingSelectedWithSender:" destination="VD2-7C-CGk" eventType="touchUpInside" id="giv-XI-2oc"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNJ-GA-2C8" userLabel="dislike">
+                                <rect key="frame" x="74" y="298" width="70" height="70"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="nhG-He-qUj"/>
+                                    <constraint firstAttribute="width" constant="70" id="qNF-AK-fFX"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="dislike"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="ratingSelectedWithSender:" destination="VD2-7C-CGk" eventType="touchUpInside" id="HcK-gf-wkq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rhz-Wc-TeQ" userLabel="good">
+                                <rect key="frame" x="152" y="298" width="70" height="70"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="NRD-gT-vpD"/>
+                                    <constraint firstAttribute="width" constant="70" id="cRA-vL-tub"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="good"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="ratingSelectedWithSender:" destination="VD2-7C-CGk" eventType="touchUpInside" id="Swl-eL-8Un"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="300" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSg-ov-jlY" userLabel="great">
+                                <rect key="frame" x="230" y="298" width="70" height="70"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="5pD-wO-kln"/>
+                                    <constraint firstAttribute="width" constant="70" id="t8T-SS-wJM"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="great"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="ratingSelectedWithSender:" destination="VD2-7C-CGk" eventType="touchUpInside" id="giv-XI-2oc"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" tag="400" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaq-Yv-yyZ" userLabel="Close">
                                 <rect key="frame" x="345" y="28" width="30" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -309,14 +304,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uso-TT-KHG" firstAttribute="centerX" secondItem="uvi-wY-rNj" secondAttribute="centerX" id="0J6-H4-pIK"/>
-                            <constraint firstItem="x5s-KW-uil" firstAttribute="top" secondItem="uso-TT-KHG" secondAttribute="bottom" constant="63" id="D29-OG-qIC"/>
+                            <constraint firstItem="Rhz-Wc-TeQ" firstAttribute="leading" secondItem="rNJ-GA-2C8" secondAttribute="trailing" constant="8" id="7Cw-Zf-a3S"/>
+                            <constraint firstItem="rNJ-GA-2C8" firstAttribute="top" secondItem="uso-TT-KHG" secondAttribute="bottom" constant="63" id="CNR-Tf-iej"/>
                             <constraint firstAttribute="trailing" secondItem="aK9-0i-H3C" secondAttribute="trailing" id="GWD-DQ-zsw"/>
                             <constraint firstItem="eaq-Yv-yyZ" firstAttribute="top" secondItem="XSg-r7-gmc" secondAttribute="bottom" constant="8" id="H2d-0V-RTZ"/>
                             <constraint firstAttribute="trailing" secondItem="eaq-Yv-yyZ" secondAttribute="trailing" id="Mlf-BW-RTy"/>
                             <constraint firstItem="aK9-0i-H3C" firstAttribute="bottom" secondItem="RA1-WG-bUQ" secondAttribute="top" id="P1O-wZ-VqP"/>
+                            <constraint firstItem="gSg-ov-jlY" firstAttribute="top" secondItem="uso-TT-KHG" secondAttribute="bottom" constant="63" id="Txa-wV-Eqt"/>
+                            <constraint firstItem="Rhz-Wc-TeQ" firstAttribute="centerX" secondItem="uvi-wY-rNj" secondAttribute="centerX" id="XwQ-Rd-Ray"/>
                             <constraint firstItem="aK9-0i-H3C" firstAttribute="top" secondItem="uso-TT-KHG" secondAttribute="bottom" constant="-235" id="ZN9-h4-S9M"/>
                             <constraint firstItem="aK9-0i-H3C" firstAttribute="top" secondItem="uvi-wY-rNj" secondAttribute="top" id="eqk-BD-Fex"/>
-                            <constraint firstItem="x5s-KW-uil" firstAttribute="centerX" secondItem="uvi-wY-rNj" secondAttribute="centerX" id="qoD-FD-88x"/>
+                            <constraint firstItem="Rhz-Wc-TeQ" firstAttribute="top" secondItem="uso-TT-KHG" secondAttribute="bottom" constant="63" id="iHB-po-SkG"/>
+                            <constraint firstItem="gSg-ov-jlY" firstAttribute="leading" secondItem="Rhz-Wc-TeQ" secondAttribute="trailing" constant="8" id="or1-y7-8Mg"/>
                             <constraint firstItem="aK9-0i-H3C" firstAttribute="leading" secondItem="uvi-wY-rNj" secondAttribute="leading" id="rxA-KW-TjL"/>
                         </constraints>
                     </view>
@@ -325,7 +324,6 @@
                         <outlet property="dislikeRating" destination="rNJ-GA-2C8" id="JoU-Di-wCS"/>
                         <outlet property="goodRating" destination="Rhz-Wc-TeQ" id="CuS-H4-spH"/>
                         <outlet property="greatRating" destination="gSg-ov-jlY" id="VZU-1I-poV"/>
-                        <outlet property="ratingStackView" destination="x5s-KW-uil" id="3gM-HJ-dYl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhj-m1-Nyh" userLabel="First Responder" sceneMemberID="firstResponder"/>
