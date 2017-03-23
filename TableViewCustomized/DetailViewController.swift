@@ -56,7 +56,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet var detailTableView: UITableView!
     @IBOutlet var ratingButton: UIButton!
  
-
+    //Segue back from review view
     @IBAction func close(segue:UIStoryboardSegue){
         if let reviewViewController = segue.source as? rgReviewViewController {
             let rating = reviewViewController.rating

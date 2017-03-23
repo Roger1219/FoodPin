@@ -256,7 +256,11 @@ class RGRestaurantTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         navigationController?.hidesBarsOnSwipe = true
     }
-       
+    
+    //Segue back from New restaurant view
+    @IBAction func cancel(segue:UIStoryboardSegue){
+        
+    }
     
     
 
