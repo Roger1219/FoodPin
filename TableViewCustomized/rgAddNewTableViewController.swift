@@ -60,13 +60,12 @@ class rgAddNewTableViewController: UITableViewController, UIImagePickerControlle
     }
     
     //For photos from photo library delegate
-    private func imagePickerController(picker : UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
         imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         imageView.contentMode = UIViewContentMode.scaleAspectFill
         imageView.clipsToBounds = true
         dismiss(animated: true, completion: nil)
-        
-        
+                
     }
     
 }
