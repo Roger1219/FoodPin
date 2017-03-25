@@ -31,6 +31,36 @@ class rgAddNewTableViewController: UITableViewController, UIImagePickerControlle
     }
     
     @IBOutlet var imageView : UIImageView!
+    @IBOutlet var nameText : UITextField!
+    @IBOutlet var locationText : UITextField!
+    @IBOutlet var typeText : UITextField!
+    @IBOutlet var yesButton : UIButton!
+    @IBOutlet var noButton : UIButton!
+    var haveBeenHere : Bool = true
+    
+    // For save button
+    @IBAction func saveButton() {
+        let alertText : String = "Name: \(nameText.text!),Location: \(locationText.text!), Type: \(typeText.text!), Havebeen: \(haveBeenHere ? "Yes" : "No")"
+        let alertView = UIAlertController(title: "Tips", message: alertText, preferredStyle: .alert)
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: {(alertAction : UIAlertAction)-> Void in self.performSegue(withIdentifier: "unwindToHomeScreen", sender: self)})
+        alertView.addAction(cancelButton)
+        self.present(alertView, animated: true, completion: nil)
+        
+    }
+    // For YES or NO buttons
+    @IBAction func haveBeenButtons (sender:UIButton!){
+        switch sender.tag   {
+        case 0:
+            yesButton.backgroundColor = UIColor.red
+            noButton.backgroundColor = UIColor.lightGray
+            self.haveBeenHere = true
+        case 1:
+            yesButton.backgroundColor = UIColor.lightGray
+            noButton.backgroundColor = UIColor.red
+            self.haveBeenHere = false
+        default : break
+        }
+    }
     
     
     
@@ -65,7 +95,7 @@ class rgAddNewTableViewController: UITableViewController, UIImagePickerControlle
         imageView.contentMode = UIViewContentMode.scaleAspectFill
         imageView.clipsToBounds = true
         dismiss(animated: true, completion: nil)
-                
+        
     }
     
 }
