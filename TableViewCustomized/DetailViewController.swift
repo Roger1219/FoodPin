@@ -13,7 +13,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         //Show the image and words
-        rgImageView.image = UIImage(named: detailRestaurant.image)
+        rgImageView.image = UIImage(data: detailRestaurant.image! as Data)
         // TableView configuration
         detailTableView.backgroundColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 0.2)
         detailTableView.tableFooterView = UIView(frame: CGRect.zero)
@@ -24,8 +24,10 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         detailTableView.estimatedRowHeight = 36
         detailTableView.rowHeight = UITableViewAutomaticDimension
         // ratingButton setting
-        ratingButton.setImage(UIImage(named: detailRestaurant.rating), for: UIControlState.normal)
-        
+        let rating = detailRestaurant.rating
+        if rating != "" {
+            ratingButton.setImage(UIImage(named: detailRestaurant.rating!), for: UIControlState.normal)
+        }
         // Do any additional setup after loading the view.
     }
 

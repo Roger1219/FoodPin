@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class rgAddNewTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -31,7 +32,6 @@ class rgAddNewTableViewController: UITableViewController, UIImagePickerControlle
     }
     
     @IBOutlet var imageView : UIImageView!
-<<<<<<< HEAD
     @IBOutlet var nameText : UITextField!
     @IBOutlet var locationText : UITextField!
     @IBOutlet var typeText : UITextField!
@@ -77,8 +77,6 @@ class rgAddNewTableViewController: UITableViewController, UIImagePickerControlle
         default : break
         }
     }
-=======
->>>>>>> parent of 0fb4d2c... Coredate with bugs
     
     
     
@@ -113,7 +111,7 @@ class rgAddNewTableViewController: UITableViewController, UIImagePickerControlle
         imageView.contentMode = UIViewContentMode.scaleAspectFill
         imageView.clipsToBounds = true
         dismiss(animated: true, completion: nil)
-                
+        
     }
     
 }
