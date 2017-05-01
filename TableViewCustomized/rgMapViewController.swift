@@ -15,7 +15,7 @@ class rgMapViewController: UIViewController {
         super.viewDidLoad()
         
         let geoCoder = CLGeocoder()
-        geoCoder.geocodeAddressString(mapRestaurant.location!, completionHandler: {
+        geoCoder.geocodeAddressString(mapRestaurant.location, completionHandler: {
             (placemarks, error) -> Void in
             if error != nil {
                 print(error!)
