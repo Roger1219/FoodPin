@@ -149,9 +149,9 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Restaurant name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Run-aU-sMo">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Restaurant name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Run-aU-sMo">
                                                     <rect key="frame" x="11" y="36" width="392" height="21"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -178,9 +178,9 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Restaurant type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LIg-bz-jYQ">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Restaurant type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LIg-bz-jYQ">
                                                     <rect key="frame" x="11" y="35" width="392" height="21"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -201,9 +201,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Restaurant location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zy1-r1-9mh">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Restaurant location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zy1-r1-9mh">
                                                     <rect key="frame" x="11" y="35" width="392" height="21"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -248,17 +248,11 @@
                                                             <state key="normal" title="Yes">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </state>
-                                                            <connections>
-                                                                <action selector="haveBeenButtonsWithSender:" destination="5qb-gq-pId" eventType="touchUpInside" id="ib7-1S-QJg"/>
-                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhg-De-Y0b">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhg-De-Y0b">
                                                             <rect key="frame" x="60" y="0.0" width="50" height="30"/>
                                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <state key="normal" title="No"/>
-                                                            <connections>
-                                                                <action selector="haveBeenButtonsWithSender:" destination="5qb-gq-pId" eventType="touchUpInside" id="oCO-WH-3Cd"/>
-                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -282,22 +276,12 @@
                     <navigationItem key="navigationItem" title="New Restaurant" id="p5y-N2-qLp">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="YUX-gV-NPP">
                             <connections>
-                                <segue destination="YCa-Nr-aCz" kind="unwind" identifier="unwindToHomeScreen" unwindAction="cancelWithSegue:" id="zQo-4F-GAV"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="HOp-v6-ngg">
-                            <connections>
-                                <action selector="saveButton" destination="5qb-gq-pId" id="QPJ-cQ-CDI"/>
+                                <segue destination="YCa-Nr-aCz" kind="unwind" unwindAction="cancelWithSegue:" id="zQo-4F-GAV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="VaN-T8-SQL" id="73M-2K-xp1"/>
-                        <outlet property="locationText" destination="zy1-r1-9mh" id="3uP-bk-WrD"/>
-                        <outlet property="nameText" destination="Run-aU-sMo" id="n22-sj-2UQ"/>
-                        <outlet property="noButton" destination="Jhg-De-Y0b" id="bpm-YN-7GB"/>
-                        <outlet property="typeText" destination="LIg-bz-jYQ" id="7wP-pE-UbK"/>
-                        <outlet property="yesButton" destination="7O2-Tj-TKJ" id="1am-rf-1Ht"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tu8-AK-mSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
