@@ -51,9 +51,17 @@ class rgAddNewTableViewController: UITableViewController, UIImagePickerControlle
         self.present(alertView, animated: true, completion: nil)
         
         //Save information in core data
-       // let mannagedObejectContext = (UIApplication.sharedApplication.delegate as? AppDelegate)?.managedObjectContext {
-            
-        //}
+        if let managedObjectContext = (UIApplication.shared.delegate as? AppDelegate)?.managedObjectContext {
+            addNewRestaurant = NSEntityDescription.insertNewObject(forEntityName: "RgRestaurant",into: managedObjectContext) as! rgRestaurant
+            addNewRestaurant.name = nameText.text!
+            addNewRestaurant.type = typeText.text!
+            addNewRestaurant.location = locationText.text!
+            if let restaurantImage = imageView.image {
+                addNewRestaurant.image = UIImagePNGRepresentation(restaurantImage) as NSData?
+            }
+            addNewRestaurant.isVisited = haveBeenHere
+    
+    }
     }
     // For YES or NO buttons
     @IBAction func haveBeenButtons (sender:UIButton!){
