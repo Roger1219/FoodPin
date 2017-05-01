@@ -115,7 +115,7 @@ class RGRestaurantTableViewController: UITableViewController {
         let RGCellIdentifier = "RGCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: RGCellIdentifier, for: indexPath) as! RGRestaurantTableViewCell
         
-        cell.RGCellImage?.image = UIImage(named: restaurants[indexPath.row].image)
+        cell.RGCellImage?.image = UIImage(data: restaurants[indexPath.row].image as! Data)
         cell.RGCellName?.text = restaurants[indexPath.row].name
         cell.RGCellLocation?.text = restaurants[indexPath.row].location
         cell.RGCellType?.text = restaurants[indexPath.row].type
@@ -133,7 +133,9 @@ class RGRestaurantTableViewController: UITableViewController {
     }
  
     
-    var restaurants:[rgRestaurant] = [
+    var restaurants:[rgRestaurant] = []
+        
+        /*
         rgRestaurant(name: "Cafe Deadend", location: "G/F,72 Po Hing Fong, Sheung Wan, Hong Kong", type: "Coffee & Tea Shop", image: "cafedeadend.jpg", isVisited: false),
         rgRestaurant(name: "Homei", location: "Hong Kong", type: "Cafe", image:"homei.jpg", isVisited: false),
         rgRestaurant(name: "Teakha", location: "Hong Kong", type: "Tea House", image:"teakha.jpg", isVisited: false),
@@ -155,7 +157,7 @@ class RGRestaurantTableViewController: UITableViewController {
         rgRestaurant(name: "Donostia", location: "London", type: "Spanish", image:"donostia.jpg", isVisited: false),
         rgRestaurant(name: "Royal Oak", location: "London", type: "British", image: "royaloak.jpg", isVisited: false),
         rgRestaurant(name: "Thai Cafe", location: "London", type: "Thai", image:"thaicafe.jpg", isVisited: false)]
-
+*/
     
     /*
     //When select a row of the table
@@ -223,8 +225,8 @@ class RGRestaurantTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         //Share action
         let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.default, title: "Share", handler: {(action, indexPath)-> Void in
-            let defaultText = "Checking in at" + self.restaurants[indexPath.row].name
-            let sharedImage = UIImage(named: self.restaurants[indexPath.row].image)
+            let defaultText = "Checking in at" + self.restaurants[indexPath.row].name!
+            let sharedImage = UIImage(data: self.restaurants[indexPath.row].image! as Data)
             let activityController = UIActivityViewController(activityItems: [sharedImage as Any,defaultText], applicationActivities: nil)
             self.present(activityController, animated: true, completion: nil)
         }
