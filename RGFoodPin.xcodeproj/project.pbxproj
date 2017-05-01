@@ -7,26 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD:RGFoodPin.xcodeproj/project.pbxproj
 		DB1CBF321E856F850012BD8A /* rgAddNewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1CBF311E856F850012BD8A /* rgAddNewTableViewController.swift */; };
+		DB3D60EE1E878BE1005DD129 /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB3D60EC1E878BE1005DD129 /* FoodPin.xcdatamodeld */; };
 		DB5856F61E80E966009DED21 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5856F51E80E966009DED21 /* MapKit.framework */; };
 		DB5856F81E80EE35009DED21 /* rgMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5856F71E80EE35009DED21 /* rgMapViewController.swift */; };
 		DB7EE8911E7C1E06000DBAEE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7EE8901E7C1E06000DBAEE /* DetailViewController.swift */; };
 		DB7EE8931E7C3111000DBAEE /* rgRestaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7EE8921E7C3111000DBAEE /* rgRestaurant.swift */; };
 		DB7EE8951E7E3287000DBAEE /* RGDetailViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7EE8941E7E3287000DBAEE /* RGDetailViewTableViewCell.swift */; };
 		DB7EE8971E7E835C000DBAEE /* rgReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7EE8961E7E835C000DBAEE /* rgReviewViewController.swift */; };
-=======
->>>>>>> parent of 6903921... FoodPin:TableViewCustomized.xcodeproj/project.pbxproj
 		DB8FB9521E769D3900DAAD3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8FB9511E769D3900DAAD3C /* AppDelegate.swift */; };
-		DB8FB9541E769D3900DAAD3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8FB9531E769D3900DAAD3C /* ViewController.swift */; };
 		DB8FB9571E769D3900DAAD3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB8FB9551E769D3900DAAD3C /* Main.storyboard */; };
 		DB8FB9591E769D3900DAAD3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB8FB9581E769D3900DAAD3C /* Assets.xcassets */; };
 		DB8FB95C1E769D3900DAAD3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB8FB95A1E769D3900DAAD3C /* LaunchScreen.storyboard */; };
+		DB8FB9641E769EB700DAAD3C /* RGRestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8FB9631E769EB700DAAD3C /* RGRestaurantTableViewController.swift */; };
+		DB8FB9661E76E4CD00DAAD3C /* RGRestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8FB9651E76E4CD00DAAD3C /* RGRestaurantTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-<<<<<<< HEAD:RGFoodPin.xcodeproj/project.pbxproj
 		DB1CBF311E856F850012BD8A /* rgAddNewTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rgAddNewTableViewController.swift; sourceTree = "<group>"; };
+		DB3D60ED1E878BE1005DD129 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
 		DB5856F51E80E966009DED21 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DB5856F71E80EE35009DED21 /* rgMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rgMapViewController.swift; sourceTree = "<group>"; };
 		DB7EE8901E7C1E06000DBAEE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -34,15 +33,13 @@
 		DB7EE8941E7E3287000DBAEE /* RGDetailViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGDetailViewTableViewCell.swift; sourceTree = "<group>"; };
 		DB7EE8961E7E835C000DBAEE /* rgReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rgReviewViewController.swift; sourceTree = "<group>"; };
 		DB8FB94E1E769D3900DAAD3C /* RGFoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGFoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
-=======
-		DB8FB94E1E769D3900DAAD3C /* TableViewCustomized.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewCustomized.app; sourceTree = BUILT_PRODUCTS_DIR; };
->>>>>>> parent of 6903921... FoodPin:TableViewCustomized.xcodeproj/project.pbxproj
 		DB8FB9511E769D3900DAAD3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB8FB9531E769D3900DAAD3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DB8FB9561E769D3900DAAD3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB8FB9581E769D3900DAAD3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB8FB95B1E769D3900DAAD3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB8FB95D1E769D3900DAAD3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB8FB9631E769EB700DAAD3C /* RGRestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGRestaurantTableViewController.swift; sourceTree = "<group>"; };
+		DB8FB9651E76E4CD00DAAD3C /* RGRestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGRestaurantTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +65,7 @@
 		DB8FB9451E769D3900DAAD3C = {
 			isa = PBXGroup;
 			children = (
-				DB8FB9501E769D3900DAAD3C /* TableViewCustomized */,
+				DB8FB9501E769D3900DAAD3C /* RGFoodPin */,
 				DB8FB94F1E769D3900DAAD3C /* Products */,
 				DB5856F41E80E966009DED21 /* Frameworks */,
 			);
@@ -77,20 +74,16 @@
 		DB8FB94F1E769D3900DAAD3C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DB8FB94E1E769D3900DAAD3C /* TableViewCustomized.app */,
+				DB8FB94E1E769D3900DAAD3C /* RGFoodPin.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DB8FB9501E769D3900DAAD3C /* TableViewCustomized */ = {
+		DB8FB9501E769D3900DAAD3C /* RGFoodPin */ = {
 			isa = PBXGroup;
 			children = (
 				DB8FB9511E769D3900DAAD3C /* AppDelegate.swift */,
-<<<<<<< HEAD:TableViewCustomized.xcodeproj/project.pbxproj
-<<<<<<< HEAD:RGFoodPin.xcodeproj/project.pbxproj
 				DB3D60EC1E878BE1005DD129 /* FoodPin.xcdatamodeld */,
-=======
->>>>>>> parent of 635f7a6... Temporary Version:RGFoodPin.xcodeproj/project.pbxproj
 				DB8FB9551E769D3900DAAD3C /* Main.storyboard */,
 				DB1CBF311E856F850012BD8A /* rgAddNewTableViewController.swift */,
 				DB5856F71E80EE35009DED21 /* rgMapViewController.swift */,
@@ -100,23 +93,20 @@
 				DB7EE8921E7C3111000DBAEE /* rgRestaurant.swift */,
 				DB7EE8941E7E3287000DBAEE /* RGDetailViewTableViewCell.swift */,
 				DB7EE8901E7C1E06000DBAEE /* DetailViewController.swift */,
-=======
-				DB8FB9531E769D3900DAAD3C /* ViewController.swift */,
-				DB8FB9551E769D3900DAAD3C /* Main.storyboard */,
->>>>>>> parent of 6903921... FoodPin:TableViewCustomized.xcodeproj/project.pbxproj
 				DB8FB9581E769D3900DAAD3C /* Assets.xcassets */,
 				DB8FB95A1E769D3900DAAD3C /* LaunchScreen.storyboard */,
 				DB8FB95D1E769D3900DAAD3C /* Info.plist */,
 			);
+			name = RGFoodPin;
 			path = TableViewCustomized;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DB8FB94D1E769D3900DAAD3C /* TableViewCustomized */ = {
+		DB8FB94D1E769D3900DAAD3C /* RGFoodPin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB8FB9601E769D3A00DAAD3C /* Build configuration list for PBXNativeTarget "TableViewCustomized" */;
+			buildConfigurationList = DB8FB9601E769D3A00DAAD3C /* Build configuration list for PBXNativeTarget "RGFoodPin" */;
 			buildPhases = (
 				DB8FB94A1E769D3900DAAD3C /* Sources */,
 				DB8FB94B1E769D3900DAAD3C /* Frameworks */,
@@ -126,9 +116,9 @@
 			);
 			dependencies = (
 			);
-			name = TableViewCustomized;
+			name = RGFoodPin;
 			productName = TableViewCustomized;
-			productReference = DB8FB94E1E769D3900DAAD3C /* TableViewCustomized.app */;
+			productReference = DB8FB94E1E769D3900DAAD3C /* RGFoodPin.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -152,7 +142,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DB8FB9491E769D3900DAAD3C /* Build configuration list for PBXProject "TableViewCustomized" */;
+			buildConfigurationList = DB8FB9491E769D3900DAAD3C /* Build configuration list for PBXProject "RGFoodPin" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -165,7 +155,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DB8FB94D1E769D3900DAAD3C /* TableViewCustomized */,
+				DB8FB94D1E769D3900DAAD3C /* RGFoodPin */,
 			);
 		};
 /* End PBXProject section */
@@ -188,18 +178,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB8FB9541E769D3900DAAD3C /* ViewController.swift in Sources */,
+				DB7EE8971E7E835C000DBAEE /* rgReviewViewController.swift in Sources */,
 				DB8FB9521E769D3900DAAD3C /* AppDelegate.swift in Sources */,
-<<<<<<< HEAD:RGFoodPin.xcodeproj/project.pbxproj
 				DB5856F81E80EE35009DED21 /* rgMapViewController.swift in Sources */,
 				DB8FB9661E76E4CD00DAAD3C /* RGRestaurantTableViewCell.swift in Sources */,
 				DB7EE8951E7E3287000DBAEE /* RGDetailViewTableViewCell.swift in Sources */,
+				DB3D60EE1E878BE1005DD129 /* FoodPin.xcdatamodeld in Sources */,
 				DB8FB9641E769EB700DAAD3C /* RGRestaurantTableViewController.swift in Sources */,
 				DB1CBF321E856F850012BD8A /* rgAddNewTableViewController.swift in Sources */,
 				DB7EE8911E7C1E06000DBAEE /* DetailViewController.swift in Sources */,
 				DB7EE8931E7C3111000DBAEE /* rgRestaurant.swift in Sources */,
-=======
->>>>>>> parent of 6903921... FoodPin:TableViewCustomized.xcodeproj/project.pbxproj
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +312,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TableViewCustomized/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Lin.Roger.TableViewCustomized;
+				PRODUCT_BUNDLE_IDENTIFIER = Lin.Roger.RGFoodPin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -336,7 +324,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TableViewCustomized/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Lin.Roger.TableViewCustomized;
+				PRODUCT_BUNDLE_IDENTIFIER = Lin.Roger.RGFoodPin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -345,7 +333,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DB8FB9491E769D3900DAAD3C /* Build configuration list for PBXProject "TableViewCustomized" */ = {
+		DB8FB9491E769D3900DAAD3C /* Build configuration list for PBXProject "RGFoodPin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DB8FB95E1E769D3A00DAAD3C /* Debug */,
@@ -354,15 +342,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DB8FB9601E769D3A00DAAD3C /* Build configuration list for PBXNativeTarget "TableViewCustomized" */ = {
+		DB8FB9601E769D3A00DAAD3C /* Build configuration list for PBXNativeTarget "RGFoodPin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DB8FB9611E769D3A00DAAD3C /* Debug */,
 				DB8FB9621E769D3A00DAAD3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DB3D60EC1E878BE1005DD129 /* FoodPin.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DB3D60ED1E878BE1005DD129 /* FoodPin.xcdatamodel */,
+			);
+			currentVersion = DB3D60ED1E878BE1005DD129 /* FoodPin.xcdatamodel */;
+			path = FoodPin.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DB8FB9461E769D3900DAAD3C /* Project object */;
 }
