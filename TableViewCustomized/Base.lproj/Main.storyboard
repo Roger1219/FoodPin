@@ -1,19 +1,22 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RjU-Es-KFl">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
+=======
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+>>>>>>> parent of 6903921... FoodPin
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Food Pin-->
-        <scene sceneID="Z8e-nd-CVE">
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
             <objects>
+<<<<<<< HEAD
                 <tableViewController id="xSL-ya-3ho" customClass="RGRestaurantTableViewController" customModule="RGFoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="84Z-nn-rsQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -146,9 +149,9 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Restaurant name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Run-aU-sMo">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Restaurant name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Run-aU-sMo">
                                                     <rect key="frame" x="11" y="36" width="392" height="21"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -175,9 +178,9 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Restaurant type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LIg-bz-jYQ">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Restaurant type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LIg-bz-jYQ">
                                                     <rect key="frame" x="11" y="35" width="392" height="21"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -198,9 +201,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Restaurant location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zy1-r1-9mh">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Restaurant location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zy1-r1-9mh">
                                                     <rect key="frame" x="11" y="35" width="392" height="21"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -245,17 +248,11 @@
                                                             <state key="normal" title="Yes">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             </state>
-                                                            <connections>
-                                                                <action selector="haveBeenButtonsWithSender:" destination="5qb-gq-pId" eventType="touchUpInside" id="ib7-1S-QJg"/>
-                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhg-De-Y0b">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhg-De-Y0b">
                                                             <rect key="frame" x="60" y="0.0" width="50" height="30"/>
                                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                             <state key="normal" title="No"/>
-                                                            <connections>
-                                                                <action selector="haveBeenButtonsWithSender:" destination="5qb-gq-pId" eventType="touchUpInside" id="oCO-WH-3Cd"/>
-                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -279,22 +276,12 @@
                     <navigationItem key="navigationItem" title="New Restaurant" id="p5y-N2-qLp">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="YUX-gV-NPP">
                             <connections>
-                                <segue destination="YCa-Nr-aCz" kind="unwind" identifier="unwindToHomeScreen" unwindAction="cancelWithSegue:" id="zQo-4F-GAV"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="HOp-v6-ngg">
-                            <connections>
-                                <action selector="saveButton" destination="5qb-gq-pId" id="QPJ-cQ-CDI"/>
+                                <segue destination="YCa-Nr-aCz" kind="unwind" unwindAction="cancelWithSegue:" id="zQo-4F-GAV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="VaN-T8-SQL" id="73M-2K-xp1"/>
-                        <outlet property="locationText" destination="zy1-r1-9mh" id="3uP-bk-WrD"/>
-                        <outlet property="nameText" destination="Run-aU-sMo" id="n22-sj-2UQ"/>
-                        <outlet property="noButton" destination="Jhg-De-Y0b" id="bpm-YN-7GB"/>
-                        <outlet property="typeText" destination="LIg-bz-jYQ" id="7wP-pE-UbK"/>
-                        <outlet property="yesButton" destination="7O2-Tj-TKJ" id="1am-rf-1Ht"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tu8-AK-mSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -306,10 +293,14 @@
         <scene sceneID="Vat-n0-T3x">
             <objects>
                 <viewController id="gHT-Rf-W0c" userLabel="Detail View Controller" customClass="DetailViewController" customModule="RGFoodPin" customModuleProvider="target" sceneMemberID="viewController">
+=======
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+>>>>>>> parent of 6903921... FoodPin
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Brh-uR-ZP2"/>
-                        <viewControllerLayoutGuide type="bottom" id="8Ec-aA-wDW"/>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
+<<<<<<< HEAD
                     <view key="view" contentMode="scaleToFill" id="Z8f-6X-puF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -417,13 +408,15 @@
                             <constraint firstItem="uzc-gL-DG6" firstAttribute="top" secondItem="Tor-Jr-zrx" secondAttribute="bottom" constant="8" id="f40-5S-87s"/>
                             <constraint firstItem="VgU-IQ-lqB" firstAttribute="top" secondItem="Brh-uR-ZP2" secondAttribute="bottom" constant="-64" id="hq6-1S-JHl"/>
                         </constraints>
+=======
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+>>>>>>> parent of 6903921... FoodPin
                     </view>
-                    <connections>
-                        <outlet property="detailTableView" destination="VgU-IQ-lqB" id="wvR-DN-jlj"/>
-                        <outlet property="ratingButton" destination="Tor-Jr-zrx" id="09z-Ew-RaN"/>
-                        <outlet property="rgImageView" destination="Aq3-T6-0pE" id="ROR-AC-oTz"/>
-                    </connections>
                 </viewController>
+<<<<<<< HEAD
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4z7-n5-0MO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2901.5999999999999" y="211.84407796101951"/>
@@ -607,8 +600,10 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQj-2R-xOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+=======
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+>>>>>>> parent of 6903921... FoodPin
             </objects>
-            <point key="canvasLocation" x="832.79999999999995" y="213.64317841079463"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aJg-x8-n6B">
@@ -629,6 +624,7 @@
             <point key="canvasLocation" x="2911.594202898551" y="-463.04347826086962"/>
         </scene>
     </scenes>
+<<<<<<< HEAD
     <resources>
         <image name="barrafina" width="426" height="426"/>
         <image name="close" width="85" height="85"/>
@@ -639,4 +635,6 @@
         <image name="photoalbum" width="85" height="85"/>
         <image name="rating" width="85" height="85"/>
     </resources>
+=======
+>>>>>>> parent of 6903921... FoodPin
 </document>

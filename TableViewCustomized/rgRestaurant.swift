@@ -7,24 +7,21 @@
 //
 
 import Foundation
-import CoreData
 
-class RgRestaurant: NSManagedObject {
-    @NSManaged var name : String
-    @NSManaged var type : String
-    @NSManaged var location : String
-    @NSManaged var image : NSData?
-    @NSManaged var isVisited : NSNumber?
-    @NSManaged var phoneNum : String?
-    @NSManaged var rating : String
+class rgRestaurant {
+    var name : String = ""
+    var type : String = ""
+    var location : String = ""
+    var image : String = ""
+    var isVisited : Bool = false
+    var phoneNum : String = ""
+    var rating : String = "rating"
     
-    /*
-    init(name:String, location:String, type:String, image:NSData, isVisited:String) {
+    init(name:String, location:String, type:String, image:String, isVisited:Bool) {
         self.name = name
         self.type = type
         self.location = location
         self.image = image
         self.isVisited = isVisited
     }
- */
 }
