@@ -620,14 +620,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dqd-bh-dbj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3983" y="946"/>
+            <point key="canvasLocation" x="3983" y="959"/>
         </scene>
         <!--Food Pin-->
         <scene sceneID="mG9-3v-uUW">
             <objects>
                 <navigationController title="Food Pin" automaticallyAdjustsScrollViewInsets="NO" id="RjU-Es-KFl" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="jyK-5i-Qdp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jyK-5i-Qdp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -638,14 +638,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQj-2R-xOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="832.79999999999995" y="213.64317841079463"/>
+            <point key="canvasLocation" x="830" y="195"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aJg-x8-n6B">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nxK-f0-aIO" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hzm-nX-n8F">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hzm-nX-n8F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
