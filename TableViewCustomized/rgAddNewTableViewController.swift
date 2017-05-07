@@ -60,18 +60,18 @@ class rgAddNewTableViewController: UITableViewController, UIImagePickerControlle
                 addNewRestaurant.image = UIImagePNGRepresentation(restaurantImage) as NSData?
             }
             addNewRestaurant.isVisited = haveBeenHere
-<<<<<<< HEAD
+
         }
         // Dismiss the view controller
         dismiss(animated: true, completion: nil)
        // let mannagedObejectContext = (UIApplication.sharedApplication.delegate as? AppDelegate)?.managedObjectContext {
             
         //}
-=======
     
     }
->>>>>>> parent of 0e0558b... Coredata Save&Delete
-    }
+
+    
+    
     // For YES or NO buttons
     @IBAction func haveBeenButtons (sender:UIButton!){
         switch sender.tag   {
