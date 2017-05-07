@@ -35,7 +35,6 @@ class rgAddNewTableViewController: UITableViewController, UIImagePickerControlle
     @IBOutlet var nameText : UITextField!
     @IBOutlet var locationText : UITextField!
     @IBOutlet var typeText : UITextField!
-    @IBOutlet var phoneNum : UITextField!
     @IBOutlet var yesButton : UIButton!
     @IBOutlet var noButton : UIButton!
     var haveBeenHere : Bool = true
@@ -44,14 +43,12 @@ class rgAddNewTableViewController: UITableViewController, UIImagePickerControlle
     
     // For save button
     @IBAction func saveButton() {
-        //Show an alert view before save
-        /*
+        
         let alertText : String = "Name: \(nameText.text!),Location: \(locationText.text!), Type: \(typeText.text!), Havebeen: \(haveBeenHere ? "Yes" : "No")"
         let alertView = UIAlertController(title: "Tips", message: alertText, preferredStyle: .alert)
-        let cancelButton = UIAlertAction(title: "Ok", style: .cancel, handler: {(alertAction : UIAlertAction)-> Void in self.performSegue(withIdentifier: "unwindToHomeScreen", sender: self)})
+        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel, handler: {(alertAction : UIAlertAction)-> Void in self.performSegue(withIdentifier: "unwindToHomeScreen", sender: self)})
         alertView.addAction(cancelButton)
         self.present(alertView, animated: true, completion: nil)
-        */
         
         //Save information in core data
         if let managedObjectContext = (UIApplication.shared.delegate as? AppDelegate)?.managedObjectContext {
@@ -59,14 +56,12 @@ class rgAddNewTableViewController: UITableViewController, UIImagePickerControlle
             addNewRestaurant.name = nameText.text!
             addNewRestaurant.type = typeText.text!
             addNewRestaurant.location = locationText.text!
-            addNewRestaurant.phoneNum = phoneNum.text!
             if let restaurantImage = imageView.image {
                 addNewRestaurant.image = UIImagePNGRepresentation(restaurantImage) as NSData?
             }
             addNewRestaurant.isVisited = haveBeenHere
-        }
-        // Dismiss the view controller
-        dismiss(animated: true, completion: nil)
+    
+    }
     }
     // For YES or NO buttons
     @IBAction func haveBeenButtons (sender:UIButton!){

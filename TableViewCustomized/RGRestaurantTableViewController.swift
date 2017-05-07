@@ -7,10 +7,9 @@
 //
 
 import UIKit
-import CoreData
 
-class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsControllerDelegate {
-    var fetchResultController:NSFetchedResultsController<NSFetchRequestResult>!
+class RGRestaurantTableViewController: UITableViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,60 +23,8 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
         // Enable self sizing cells
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
-        
-        //Load data from CoreData
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "RgRestaurant")
-        let sortDescription = NSSortDescriptor(key: "name", ascending: true)
-        fetchRequest.sortDescriptors = [sortDescription]
-        if let managedObjectContext = (UIApplication.shared.delegate as? AppDelegate)?.managedObjectContext {
-            fetchResultController = NSFetchedResultsController(fetchRequest:fetchRequest,managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
-            fetchResultController.delegate = self
-            do {
-                try fetchResultController.performFetch()
-                restaurants = fetchResultController.fetchedObjects as! [rgRestaurant]
-            } catch {
-                print(error)
-            }
-        }
-        
     }
-    
-    //When CoreData changes
-    
-    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        tableView.beginUpdates()
-    }
-    
-    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-        
-        switch type {
-        case .insert:
-            if let _newIndexPath = newIndexPath {
-                tableView.insertRows(at: [_newIndexPath], with: .fade)
-            }
-        case .delete:
-            if let _indexPath = indexPath {
-                tableView.deleteRows(at: [_indexPath], with: .fade)
-            }
-        case .update:
-            if let _indexPath = indexPath {
-                tableView.reloadRows(at: [_indexPath], with: .fade)
-            }
-            
-        default:
-            tableView.reloadData()
-        }
-        
-        restaurants = controller.fetchedObjects as! [rgRestaurant]
-    }
-    
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        tableView.endUpdates()
-    }
-   
-    
-    
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -105,7 +52,50 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
     }
     */
 
-   
+    /*
+    // Override to support conditional editing of the table view.
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    */
+
+    /*
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }    
+    }
+    */
+
+    /*
+    // Override to support rearranging the table view.
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+
+    }
+    */
+
+    /*
+    // Override to support conditional rearranging of the table view.
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the item to be re-orderable.
+        return true
+    }
+    */
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
     
     //Written by Roger!
     
@@ -113,7 +103,14 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
     override var prefersStatusBarHidden: Bool {
         return true
     }
- 
+    /*
+    var RGRestaurantNames = ["Cafe Deadend", "Homei", "Teakha", "Cafe Loisl", "Petite Oyster", "For Kee Restaurant", "Po's Atelier", "Bourke Street Bakery", "Haigh'sChocolate", "Palomino Espresso", "Upstate", "Traif", "Graham Avenue Meats","Waffle & Wolf", "Five Leaves", "Cafe Lore", "Confessional", "Barrafina","Donostia", "Royal Oak", "Thai Cafe"]
+    var RGRestaurantLocations = ["Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong","Hong Kong", "Hong Kong", "Hong Kong", "Sydney", "Sydney", "Sydney", "New York","New York", "New York", "New York", "New York", "New York", "New York","London", "London", "London", "London"]
+    var RGrestaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian/Causual Drink", "French", "Bakery", "Bakery", "Chocolate","Cafe", "American /Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee& Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
+    var RGrestaurantImages = ["cafedeadend.jpg", "homei.jpg", "teakha.jpg","cafeloisl.jpg", "petiteoyster.jpg", "forkeerestaurant.jpg", "posatelier.jpg","bourkestreetbakery.jpg", "haighschocolate.jpg", "palominoespresso.jpg","upstate.jpg", "traif.jpg", "grahamavenuemeats.jpg", "wafflewolf.jpg","fiveleaves.jpg", "cafelore.jpg", "confessional.jpg", "barrafina.jpg", "donostia.jpg", "royaloak.jpg", "thaicafe.jpg"]
+    var RGrestaurantIsVisited = [Bool](repeating: false, count: 21)
+    
+    */
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let RGCellIdentifier = "RGCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: RGCellIdentifier, for: indexPath) as! RGRestaurantTableViewCell
@@ -138,6 +135,29 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
     
     var restaurants:[rgRestaurant] = []
         
+        /*
+        rgRestaurant(name: "Cafe Deadend", location: "G/F,72 Po Hing Fong, Sheung Wan, Hong Kong", type: "Coffee & Tea Shop", image: "cafedeadend.jpg", isVisited: false),
+        rgRestaurant(name: "Homei", location: "Hong Kong", type: "Cafe", image:"homei.jpg", isVisited: false),
+        rgRestaurant(name: "Teakha", location: "Hong Kong", type: "Tea House", image:"teakha.jpg", isVisited: false),
+        rgRestaurant(name: "Cafe loisl", location:"Hong Kong", type: "Austrian / Causual Drink", image: "cafeloisl.jpg", isVisited: false),
+        rgRestaurant(name: "Petite Oyster", location: "Hong Kong", type: "French",image: "petiteoyster.jpg", isVisited: false),
+        rgRestaurant(name: "For Kee Restaurant", location: "HongKong", type: "Bakery", image: "forkeerestaurant.jpg", isVisited: false),
+        rgRestaurant(name: "Po's Atelier", location: "Hong Kong", type: "Bakery",image: "posatelier.jpg", isVisited: false),
+        rgRestaurant(name: "Bourke Street Backery", location:"Sydney", type: "Chocolate", image: "bourkestreetbakery.jpg", isVisited: false),
+        rgRestaurant(name: "Haigh's Chocolate", location: "Sydney", type: "Cafe",image: "haighschocolate.jpg", isVisited: false),
+        rgRestaurant(name: "Palomino Espresso", location:"Sydney", type: "American / Seafood", image: "palominoespresso.jpg", isVisited: false),
+        rgRestaurant(name: "Upstate", location: "New York", type: "American", image:"upstate.jpg", isVisited: false),
+        rgRestaurant(name: "Traif", location: "New York", type: "American", image:"traif.jpg", isVisited: false),
+        rgRestaurant(name: "Graham Avenue Meats", location: "New York",type: "Breakfast & Brunch", image: "grahamavenuemeats.jpg", isVisited: false),
+        rgRestaurant(name: "Waffle & Wolf", location: "NewYork", type: "Coffee & Tea", image: "wafflewolf.jpg", isVisited: false),
+        rgRestaurant(name: "Five Leaves", location: "New York", type: "Coffee & Tea",image: "fiveleaves.jpg", isVisited: false),
+        rgRestaurant(name: "Cafe Lore", location: "New York", type: "Latin American",image: "cafelore.jpg", isVisited: false),
+        rgRestaurant(name: "Confessional", location: "New York", type: "Spanish",image: "confessional.jpg", isVisited: false),
+        rgRestaurant(name: "Barrafina", location: "London", type: "Spanish", image:"barrafina.jpg", isVisited: false),
+        rgRestaurant(name: "Donostia", location: "London", type: "Spanish", image:"donostia.jpg", isVisited: false),
+        rgRestaurant(name: "Royal Oak", location: "London", type: "British", image: "royaloak.jpg", isVisited: false),
+        rgRestaurant(name: "Thai Cafe", location: "London", type: "Thai", image:"thaicafe.jpg", isVisited: false)]
+*/
     
     /*
     //When select a row of the table
