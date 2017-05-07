@@ -67,6 +67,9 @@ class rgAddNewTableViewController: UITableViewController, UIImagePickerControlle
         }
         // Dismiss the view controller
         dismiss(animated: true, completion: nil)
+       // let mannagedObejectContext = (UIApplication.sharedApplication.delegate as? AppDelegate)?.managedObjectContext {
+            
+        //}
     }
     // For YES or NO buttons
     @IBAction func haveBeenButtons (sender:UIButton!){
