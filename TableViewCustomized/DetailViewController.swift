@@ -24,8 +24,9 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         detailTableView.estimatedRowHeight = 36
         detailTableView.rowHeight = UITableViewAutomaticDimension
         // ratingButton setting
-        if let rating = detailRestaurant.rating {
-            ratingButton.setImage(UIImage(named: rating), for: UIControlState.normal)
+        let rating = detailRestaurant.rating
+        if rating != "" {
+            ratingButton.setImage(UIImage(named: detailRestaurant.rating!), for: UIControlState.normal)
         }
         // Do any additional setup after loading the view.
     }
