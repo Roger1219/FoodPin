@@ -59,11 +59,19 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
  
     //Segue back from review view
     @IBAction func close(segue:UIStoryboardSegue){
+        //Change the button image of review button
         if let reviewViewController = segue.source as? rgReviewViewController {
             let rating = reviewViewController.rating
             if  rating != "close" {
-            detailRestaurant.rating = rating
-            ratingButton.setImage(UIImage(named: rating), for: UIControlState.normal)
+                detailRestaurant.rating = rating
+                ratingButton.setImage(UIImage(named: rating), for: UIControlState.normal)
+                if let managedObjectContext = (UIApplication.shared.delegate as? AppDelegate)?.managedObjectContext {
+                    do {
+                        try managedObjectContext.save()
+                    } catch{
+                        print(error)
+                    }
+                }
             }
             
         }

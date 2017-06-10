@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TableViewCustomized/DetailViewController.swift"
-            timestampString = "515499547.739053"
+            timestampString = "518669159.548469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "close(segue:)"
             landmarkType = "7">
          </BreakpointContent>
