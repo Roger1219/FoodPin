@@ -9,8 +9,14 @@
 import UIKit
 import CoreData
 
-class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsControllerDelegate {
+class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
+    //for database
+    var restaurants:[rgRestaurant] = []
     var fetchResultController:NSFetchedResultsController<NSFetchRequestResult>!
+    //for searchBar
+    var searchController : UISearchController!
+    var searchResults:[rgRestaurant] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,7 +45,11 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
                 print(error)
             }
         }
-        
+        //for searchBar
+        searchController = UISearchController(searchResultsController: nil)
+        tableView.tableHeaderView = searchController.searchBar
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
     }
     
     //When CoreData changes
@@ -92,7 +102,11 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return restaurants.count
+        if searchController.isActive {
+            return searchResults.count
+        } else {
+            return restaurants.count
+        }
     }
 
     /*
@@ -117,13 +131,15 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let RGCellIdentifier = "RGCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: RGCellIdentifier, for: indexPath) as! RGRestaurantTableViewCell
+        //for searchBar or normal condition
+        let restaurant = (searchController.isActive) ? searchResults[indexPath.row] : restaurants[indexPath.row]
         
-        cell.RGCellImage?.image = UIImage(data: restaurants[indexPath.row].image as! Data)
-        cell.RGCellName?.text = restaurants[indexPath.row].name
-        cell.RGCellLocation?.text = restaurants[indexPath.row].location
-        cell.RGCellType?.text = restaurants[indexPath.row].type
+        cell.RGCellImage?.image = UIImage(data: restaurant.image as! Data)
+        cell.RGCellName?.text = restaurant.name
+        cell.RGCellLocation?.text = restaurant.location
+        cell.RGCellType?.text = restaurant.type
         
-        if restaurants[indexPath.row].isVisited {
+        if restaurant.isVisited {
             cell.accessoryType = UITableViewCellAccessoryType.checkmark
         }
         else {
@@ -136,7 +152,7 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
     }
  
     
-    var restaurants:[rgRestaurant] = []
+ 
         
     
     /*
@@ -235,7 +251,7 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
         if segue.identifier == "showDetail" {
             let indexPath = tableView.indexPathForSelectedRow
             let destinationView = segue.destination as! DetailViewController
-            destinationView.detailRestaurant = restaurants[(indexPath?.row)!]
+            destinationView.detailRestaurant = (searchController.isActive) ? searchResults[(indexPath?.row)!] : restaurants[(indexPath?.row)!]
         }
     }
     
@@ -250,6 +266,20 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
         
     }
     
-    
+    //for searchBar
+    func filterContentForSearchText(searchText: String){
+        searchResults = restaurants.filter({ (restaurant:rgRestaurant) -> Bool in
+            //search logic
+            let nameMatch = restaurant.name?.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+            let locationMatch = restaurant.location?.range(of: searchText, options: NSString.CompareOptions.caseInsensitive)
+            return ((nameMatch != nil) || (locationMatch != nil))
+        })
+        }
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text {
+            filterContentForSearchText(searchText: searchText)
+            tableView.reloadData()
+        }
+    }
 
 }

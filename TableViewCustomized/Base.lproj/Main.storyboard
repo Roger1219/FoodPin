@@ -332,6 +332,14 @@
             </objects>
             <point key="canvasLocation" x="3818.8405797101454" y="-463.04347826086962"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="pUJ-6h-mic">
+            <objects>
+                <pageViewController storyboardIdentifier="walkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="fek-hD-Z1f" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cvC-ze-ml5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="195"/>
+        </scene>
         <!--Detail View Controller-->
         <scene sceneID="Vat-n0-T3x">
             <objects>
@@ -356,7 +364,7 @@
                                         <rect key="frame" x="0.0" y="328" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ckY-Ns-cj1" id="Uw2-oL-b7h">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0Ph-bj-CJA" userLabel="Stack">
