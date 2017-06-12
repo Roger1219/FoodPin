@@ -50,6 +50,11 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
+        
+        //for walkthrough page view
+        if let pageViewController = storyboard?.instantiateViewController(withIdentifier: "WalkthroughPageView") as? WalkthroughPageViewController {
+            present(pageViewController, animated: true, completion: nil)
+        }
     }
     
     //When CoreData changes

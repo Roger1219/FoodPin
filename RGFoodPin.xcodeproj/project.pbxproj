@@ -21,6 +21,8 @@
 		DB8FB95C1E769D3900DAAD3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB8FB95A1E769D3900DAAD3C /* LaunchScreen.storyboard */; };
 		DB8FB9641E769EB700DAAD3C /* RGRestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8FB9631E769EB700DAAD3C /* RGRestaurantTableViewController.swift */; };
 		DB8FB9661E76E4CD00DAAD3C /* RGRestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8FB9651E76E4CD00DAAD3C /* RGRestaurantTableViewCell.swift */; };
+		DB985F5C1EED783E0004D7E6 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB985F5B1EED783E0004D7E6 /* WalkthroughPageViewController.swift */; };
+		DB985F5E1EED785B0004D7E6 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB985F5D1EED785B0004D7E6 /* WalkthroughContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		DB8FB95D1E769D3900DAAD3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB8FB9631E769EB700DAAD3C /* RGRestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGRestaurantTableViewController.swift; sourceTree = "<group>"; };
 		DB8FB9651E76E4CD00DAAD3C /* RGRestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGRestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		DB985F5B1EED783E0004D7E6 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		DB985F5D1EED785B0004D7E6 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 				DB8FB9581E769D3900DAAD3C /* Assets.xcassets */,
 				DB8FB95A1E769D3900DAAD3C /* LaunchScreen.storyboard */,
 				DB8FB95D1E769D3900DAAD3C /* Info.plist */,
+				DB985F5B1EED783E0004D7E6 /* WalkthroughPageViewController.swift */,
+				DB985F5D1EED785B0004D7E6 /* WalkthroughContentViewController.swift */,
 			);
 			name = RGFoodPin;
 			path = TableViewCustomized;
@@ -181,7 +187,9 @@
 				DB7EE8971E7E835C000DBAEE /* rgReviewViewController.swift in Sources */,
 				DB8FB9521E769D3900DAAD3C /* AppDelegate.swift in Sources */,
 				DB5856F81E80EE35009DED21 /* rgMapViewController.swift in Sources */,
+				DB985F5E1EED785B0004D7E6 /* WalkthroughContentViewController.swift in Sources */,
 				DB8FB9661E76E4CD00DAAD3C /* RGRestaurantTableViewCell.swift in Sources */,
+				DB985F5C1EED783E0004D7E6 /* WalkthroughPageViewController.swift in Sources */,
 				DB7EE8951E7E3287000DBAEE /* RGDetailViewTableViewCell.swift in Sources */,
 				DB3D60EE1E878BE1005DD129 /* FoodPin.xcdatamodeld in Sources */,
 				DB8FB9641E769EB700DAAD3C /* RGRestaurantTableViewController.swift in Sources */,
