@@ -16,20 +16,22 @@ class WalkthroughContentViewController: UIViewController {
     @IBOutlet var contentDot: UIPageControl!
     @IBOutlet var button: UIButton!
     
-    @IBAction func button(_ sender: Any) {
-        if index < 2{
-            let pageViewController = parent as! WalkthroughPageViewController
-            pageViewController.forward(index)
-        } else {
-            dismiss(animated: true, completion: nil)
-        }
-    }
-    
     var index = 0
     var imageFile = ""
     var content = ""
     var heading = ""
     
+
+    @IBAction func button(_ sender: Any) {
+        if index < 2{
+            let pageViewController = parent as! WalkthroughPageViewController
+            pageViewController.forward(index)
+        } else {
+            let defaults = UserDefaults.standard
+            defaults.set(true, forKey: "hasViewedWalkthrough")
+            dismiss(animated: true, completion: nil)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,12 +46,12 @@ class WalkthroughContentViewController: UIViewController {
         else {
             button.setTitle("Done", for: .normal)
         }
-        
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 }

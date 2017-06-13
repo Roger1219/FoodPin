@@ -16,7 +16,7 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
     //for searchBar
     var searchController : UISearchController!
     var searchResults:[rgRestaurant] = []
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,7 +30,7 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
         // Enable self sizing cells
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
-        
+
         //Load data from CoreData
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "RgRestaurant")
         let sortDescription = NSSortDescriptor(key: "name", ascending: true)
@@ -50,21 +50,27 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
-        
+
         //for walkthrough page view
-        if let pageViewController = storyboard?.instantiateViewController(withIdentifier: "WalkthroughPageView") as? WalkthroughPageViewController {
-            present(pageViewController, animated: true, completion: nil)
+        let defaults = UserDefaults.standard
+        let hasViewedWalkthrough = defaults.bool(forKey: "hasViewedWalkthrough")
+        if hasViewedWalkthrough {
+          return
+        } else {
+          if let pageViewController = storyboard?.instantiateViewController(withIdentifier: "WalkthroughPageView") as? WalkthroughPageViewController {
+              present(pageViewController, animated: true, completion: nil)
+            }
         }
     }
-    
+
     //When CoreData changes
-    
+
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
     }
-    
+
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-        
+
         switch type {
         case .insert:
             if let _newIndexPath = newIndexPath {
@@ -78,21 +84,21 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
             if let _indexPath = indexPath {
                 tableView.reloadRows(at: [_indexPath], with: .fade)
             }
-            
+
         default:
             tableView.reloadData()
         }
-        
+
         restaurants = controller.fetchedObjects as! [rgRestaurant]
     }
-    
+
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.endUpdates()
     }
-   
-    
-    
-    
+
+
+
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -124,26 +130,26 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
     }
     */
 
-   
-    
+
+
     //Written by Roger!
-    
-    
+
+
     override var prefersStatusBarHidden: Bool {
         return true
     }
- 
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let RGCellIdentifier = "RGCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: RGCellIdentifier, for: indexPath) as! RGRestaurantTableViewCell
         //for searchBar or normal condition
         let restaurant = (searchController.isActive) ? searchResults[indexPath.row] : restaurants[indexPath.row]
-        
+
         cell.RGCellImage?.image = UIImage(data: restaurant.image as! Data)
         cell.RGCellName?.text = restaurant.name
         cell.RGCellLocation?.text = restaurant.location
         cell.RGCellType?.text = restaurant.type
-        
+
         if restaurant.isVisited {
             cell.accessoryType = UITableViewCellAccessoryType.checkmark
         }
@@ -152,18 +158,18 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
         }
         //Above lines equal to these:
         //cell.accessoryType = RGrestaurantIsVisited[indexPath.row] ? .checkmark : .none
-        
+
         return cell
     }
- 
-    
- 
-        
-    
+
+
+
+
+
     /*
     //When select a row of the table
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+
         let RGAlert = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: UIAlertControllerStyle.actionSheet)
         // Add Cancel action
         let CancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
@@ -177,7 +183,7 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
         }
         let CallAction = UIAlertAction(title: "Call", style: UIAlertActionStyle.default, handler: CallActionHander)
         RGAlert.addAction(CallAction)
-        
+
         //Add Check or Uncheck action
         if !RGrestaurantIsVisited[indexPath.row]  {
             //Add Check action
@@ -198,7 +204,7 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
             }))
             RGAlert.addAction(UncheckAction)
         }
-        
+
         //Show Alert
         self.present(RGAlert, animated: true, completion: nil)
 
@@ -206,7 +212,7 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
         tableView.deselectRow(at: indexPath, animated: true)
     }
     */
-    
+
     /*
     //Enable the swipe to delete function
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -216,10 +222,10 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
             RGRestaurantLocations.remove(at: indexPath.row)
             RGrestaurantImages.remove(at: indexPath.row)
             RGrestaurantIsVisited.remove(at: indexPath.row)
-            
+
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         }
-        
+
     }
     */
     //Enable customized actions in row
@@ -250,7 +256,7 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
         //Add actions to row
         return [deleteAction,shareAction]
     }
-    
+
     //Segue to next view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
@@ -259,18 +265,18 @@ class RGRestaurantTableViewController: UITableViewController,NSFetchedResultsCon
             destinationView.detailRestaurant = (searchController.isActive) ? searchResults[(indexPath?.row)!] : restaurants[(indexPath?.row)!]
         }
     }
-    
+
     //Hide the navigation bar on swipe
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.hidesBarsOnSwipe = true
     }
-    
+
     //Segue back from New restaurant view
     @IBAction func cancel(segue:UIStoryboardSegue){
-        
+
     }
-    
+
     //for searchBar
     func filterContentForSearchText(searchText: String){
         searchResults = restaurants.filter({ (restaurant:rgRestaurant) -> Bool in

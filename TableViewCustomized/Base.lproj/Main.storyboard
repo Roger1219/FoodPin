@@ -336,7 +336,7 @@
         <!--Walkthrough Page View Controller-->
         <scene sceneID="pUJ-6h-mic">
             <objects>
-                <pageViewController storyboardIdentifier="WalkthroughPageView" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="fek-hD-Z1f" customClass="WalkthroughPageViewController" customModule="RGFoodPin" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="WalkthroughPageView" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="none" id="fek-hD-Z1f" customClass="WalkthroughPageViewController" customModule="RGFoodPin" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvC-ze-ml5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-20" y="195"/>
