@@ -23,6 +23,10 @@
 		DB8FB9661E76E4CD00DAAD3C /* RGRestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8FB9651E76E4CD00DAAD3C /* RGRestaurantTableViewCell.swift */; };
 		DB985F5C1EED783E0004D7E6 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB985F5B1EED783E0004D7E6 /* WalkthroughPageViewController.swift */; };
 		DB985F5E1EED785B0004D7E6 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB985F5D1EED785B0004D7E6 /* WalkthroughContentViewController.swift */; };
+		DBF3E6381EF5652C00E26D88 /* about.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF3E6361EF5652C00E26D88 /* about.storyboard */; };
+		DBF3E63A1EF5655200E26D88 /* discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF3E6391EF5655200E26D88 /* discover.storyboard */; };
+		DBF3E63F1EF569E000E26D88 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3E63E1EF569E000E26D88 /* AboutTableViewController.swift */; };
+		DBF3E6411EF5759500E26D88 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF3E6401EF5759500E26D88 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,10 @@
 		DB8FB9651E76E4CD00DAAD3C /* RGRestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGRestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		DB985F5B1EED783E0004D7E6 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		DB985F5D1EED785B0004D7E6 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		DBF3E6371EF5652C00E26D88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/about.storyboard; sourceTree = "<group>"; };
+		DBF3E6391EF5655200E26D88 /* discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = discover.storyboard; sourceTree = "<group>"; };
+		DBF3E63E1EF569E000E26D88 /* AboutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		DBF3E6401EF5759500E26D88 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,8 @@
 				DB8FB9511E769D3900DAAD3C /* AppDelegate.swift */,
 				DB3D60EC1E878BE1005DD129 /* FoodPin.xcdatamodeld */,
 				DB8FB9551E769D3900DAAD3C /* Main.storyboard */,
+				DBF3E6391EF5655200E26D88 /* discover.storyboard */,
+				DBF3E6361EF5652C00E26D88 /* about.storyboard */,
 				DB1CBF311E856F850012BD8A /* rgAddNewTableViewController.swift */,
 				DB5856F71E80EE35009DED21 /* rgMapViewController.swift */,
 				DB7EE8961E7E835C000DBAEE /* rgReviewViewController.swift */,
@@ -102,6 +112,8 @@
 				DB8FB95D1E769D3900DAAD3C /* Info.plist */,
 				DB985F5B1EED783E0004D7E6 /* WalkthroughPageViewController.swift */,
 				DB985F5D1EED785B0004D7E6 /* WalkthroughContentViewController.swift */,
+				DBF3E63E1EF569E000E26D88 /* AboutTableViewController.swift */,
+				DBF3E6401EF5759500E26D88 /* WebViewController.swift */,
 			);
 			name = RGFoodPin;
 			path = TableViewCustomized;
@@ -139,6 +151,7 @@
 				TargetAttributes = {
 					DB8FB94D1E769D3900DAAD3C = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = VY68LBUXU5;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -173,6 +186,8 @@
 			files = (
 				DB8FB95C1E769D3900DAAD3C /* LaunchScreen.storyboard in Resources */,
 				DB8FB9591E769D3900DAAD3C /* Assets.xcassets in Resources */,
+				DBF3E63A1EF5655200E26D88 /* discover.storyboard in Resources */,
+				DBF3E6381EF5652C00E26D88 /* about.storyboard in Resources */,
 				DB8FB9571E769D3900DAAD3C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB7EE8971E7E835C000DBAEE /* rgReviewViewController.swift in Sources */,
+				DBF3E63F1EF569E000E26D88 /* AboutTableViewController.swift in Sources */,
 				DB8FB9521E769D3900DAAD3C /* AppDelegate.swift in Sources */,
 				DB5856F81E80EE35009DED21 /* rgMapViewController.swift in Sources */,
 				DB985F5E1EED785B0004D7E6 /* WalkthroughContentViewController.swift in Sources */,
@@ -194,6 +210,7 @@
 				DB3D60EE1E878BE1005DD129 /* FoodPin.xcdatamodeld in Sources */,
 				DB8FB9641E769EB700DAAD3C /* RGRestaurantTableViewController.swift in Sources */,
 				DB1CBF321E856F850012BD8A /* rgAddNewTableViewController.swift in Sources */,
+				DBF3E6411EF5759500E26D88 /* WebViewController.swift in Sources */,
 				DB7EE8911E7C1E06000DBAEE /* DetailViewController.swift in Sources */,
 				DB7EE8931E7C3111000DBAEE /* rgRestaurant.swift in Sources */,
 			);
@@ -216,6 +233,14 @@
 				DB8FB95B1E769D3900DAAD3C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DBF3E6361EF5652C00E26D88 /* about.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBF3E6371EF5652C00E26D88 /* Base */,
+			);
+			name = about.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -318,6 +343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VY68LBUXU5;
 				INFOPLIST_FILE = TableViewCustomized/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Lin.Roger.RGFoodPin;
@@ -330,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VY68LBUXU5;
 				INFOPLIST_FILE = TableViewCustomized/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Lin.Roger.RGFoodPin;
